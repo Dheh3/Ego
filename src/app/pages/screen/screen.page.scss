@@ -1,3 +1,26 @@
-ion-card{
+ion-card {
     height: 90vh;
+}
+
+.display {
+    position: relative;
+    /* Para que os elementos posicionados dentro sejam relativos a este */
+}
+
+.subtitles {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: white;
+    z-index: 10;
+    transform: translate(0px, 10vh);
+}
+
+
+.bkg-card {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
 }

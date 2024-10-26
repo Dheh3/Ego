@@ -1,5 +1,4 @@
 <ion-card [color]=color *ngIf="dialogue.options.length">
     <h4>{{ dialogue.text }}</h4>
     <p *ngFor=" let option of dialogue.options" (click)="chooseOption(option)"> {{ option.text }}</p>
-
 </ion-card>

@@ -13,7 +13,6 @@ export class ScreenPage implements OnInit {
   characterName: string = '';
   dialogue: any;
 
-
   constructor(
     private gameService: GameService,
     private dialoguesService: DialoguesService

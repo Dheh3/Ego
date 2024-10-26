@@ -1,12 +1,12 @@
 <ion-content [fullscreen]="true">
+  <div class="display">
+    <ion-card color="medium">
+      <!-- {{characterName}} -->
+      <!-- <img [src]="dialogue.background" alt=""> -->
+      <div class="bkg-card" [ngStyle]="{'background-image': 'url(' + dialogue?.background + ')' }">
 
-  <ion-card color="medium">
-    characters
-    {{characterName}}
-    <app-subtitles></app-subtitles>
-
-    <img [src]="dialogue.background" alt="">
-
-  </ion-card>
-
+      </div>
+    </ion-card>
+    <app-subtitles class="subtitles"></app-subtitles>
+  </div>
 </ion-content>
