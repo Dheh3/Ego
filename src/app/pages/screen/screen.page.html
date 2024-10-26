@@ -1,11 +1,15 @@
 <ion-content [fullscreen]="true">
-  
+
   <ion-card color="medium">
     characters
     {{characterName}}
     <app-subtitles></app-subtitles>
+    <h4>{{ dialogue.text }}</h4>
+  
+    <div *ngIf="dialogue.options.length">
+      <h3 *ngFor=" let option of dialogue.options" (click)="chooseOption(option)"> {{ option.text }}</h3>
+    </div>
+    
   </ion-card>
 
 </ion-content>
-
-
