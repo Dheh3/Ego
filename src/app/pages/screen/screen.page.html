@@ -5,11 +5,19 @@
     {{characterName}}
     <app-subtitles></app-subtitles>
     <h4>{{ dialogue.text }}</h4>
-  
-    <div *ngIf="dialogue.options.length">
+
+    <!-- <div *ngIf="dialogue.options.length">
       <h3 *ngFor=" let option of dialogue.options" (click)="chooseOption(option)"> {{ option.text }}</h3>
-    </div>
+    </div> -->
+
+
+    <img [src]="dialogue.background" alt="">
+
+
+    <!-- <img src="https://placehold.co/400" alt=""> -->
+
     
+
   </ion-card>
 
 </ion-content>

@@ -7,7 +7,7 @@ export interface scenesOption {
 export const scenes = {
     start: {
         text: 'Olá mundo.',
-        background: 'https://placehold.co/400',
+        background: 'https://placewaifu.com/image/200',
         options: [
             { text: '1', next: 'end' },
             { text: '2', next: 'end' },

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DialoguesService } from 'src/app/services/dialogues.service';
+import { scenesOption } from 'src/app/routes/scenes';
 
 @Component({
   selector: 'app-subtitles',
@@ -7,11 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubtitlesComponent  implements OnInit {
 
-  black = 'dark'
-  red = 'danger'
+  color = 'dark'
+  
+  dialogue: any;
 
-  constructor() { }
+  constructor(
+    private dialoguesService: DialoguesService
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.dialogue = this.dialoguesService.getDialogue()
+  }
+
+  chooseOption(option: scenesOption){
+    this.dialoguesService.chooseOption(option)
+    this.dialogue = this.dialoguesService.getDialogue()
+  }
+
+  resetDialogue(){
+    this.dialoguesService.reset()
+    this.dialogue = this.dialoguesService.getDialogue()
+  }
 
 }

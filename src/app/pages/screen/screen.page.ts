@@ -29,7 +29,7 @@ export class ScreenPage implements OnInit {
     this.characterName = this.gameService.getCharacterName()
   }
 
-  chooseOption(option: scenesOption){
+  /* chooseOption(option: scenesOption){
     this.dialoguesService.chooseOption(option)
     this.dialogue = this.dialoguesService.getDialogue()
   }
@@ -37,6 +37,6 @@ export class ScreenPage implements OnInit {
   resetDialogue(){
     this.dialoguesService.reset()
     this.dialogue = this.dialoguesService.getDialogue()
-  }
+  } */
 
 }
