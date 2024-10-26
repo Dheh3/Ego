@@ -18,17 +18,20 @@ export class SubtitlesComponent  implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.dialogue = this.dialoguesService.getDialogue()
+    //this.dialogue = this.dialoguesService.getDialogue()
+    this.dialoguesService.currentDialogue$.subscribe( dialogue => {
+      this.dialogue = dialogue
+    })
   }
 
   chooseOption(option: scenesOption){
     this.dialoguesService.chooseOption(option)
-    this.dialogue = this.dialoguesService.getDialogue()
+    //this.dialogue = this.dialoguesService.getDialogue()
   }
 
   resetDialogue(){
     this.dialoguesService.reset()
-    this.dialogue = this.dialoguesService.getDialogue()
+    //this.dialogue = this.dialoguesService.getDialogue()
   }
 
 }

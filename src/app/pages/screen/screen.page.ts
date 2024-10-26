@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from 'src/app/services/game.service';
 import { DialoguesService } from 'src/app/services/dialogues.service';
-import { scenesOption } from 'src/app/routes/scenes';
+//import { scenesOption } from 'src/app/routes/scenes';
 
 @Component({
   selector: 'app-screen',
@@ -11,7 +11,6 @@ import { scenesOption } from 'src/app/routes/scenes';
 export class ScreenPage implements OnInit {
 
   characterName: string = '';
-
   dialogue: any;
 
 
@@ -22,7 +21,10 @@ export class ScreenPage implements OnInit {
 
   ngOnInit() {
     this.displayEgo()
-    this.dialogue = this.dialoguesService.getDialogue()
+    //this.dialogue = this.dialoguesService.getDialogue()
+    this.dialoguesService.currentDialogue$.subscribe(dialogue => {
+      this.dialogue = dialogue
+    })
   }
 
   displayEgo() {
