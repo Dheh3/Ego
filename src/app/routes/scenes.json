@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "text": "Você encontra a princesa em uma sala escura.",
+        "image": "https://placehold.co/400",
+        "choices": [
+            {
+                "text": "Falar com a princesa",
+                "nextScene": 2
+            },
+            {
+                "text": "Fugir",
+                "nextScene": 3
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "text": "A princesa olha para você com surpresa.",
+        "image": "https://placehold.co/400",
+        "choices": [
+            {
+                "text": "Aproximar-se",
+                "nextScene": 4
+            },
+            {
+                "text": "Manter distância",
+                "nextScene": 5
+            }
+        ]
+    }
+]

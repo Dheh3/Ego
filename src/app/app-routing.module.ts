@@ -10,11 +10,12 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'screen',
+    loadChildren: () => import('./pages/screen/screen.module').then( m => m.ScreenPageModule)
   },
-  {
-    path: 'first',
-    loadChildren: () => import('./pages/first/first.module').then( m => m.FirstPageModule)
-  },
+
+  
 ];
 
 @NgModule({
