@@ -9,9 +9,9 @@ import { scenesOption } from 'src/app/routes/scenes';
 })
 export class SubtitlesComponent  implements OnInit {
 
-  color = 'dark'
-  
+  color = 'dark' 
   dialogue: any;
+  showFullText = false
 
   constructor(
     private dialoguesService: DialoguesService

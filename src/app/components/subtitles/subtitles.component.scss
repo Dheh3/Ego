@@ -3,6 +3,14 @@
 } */
 
 ion-card{
+    *{
+        border: red 1px solid;
+    }
+    
+    h5{
+        margin: 0;
+        padding: 0 20px 5px 20px;
+    }
 
     p{
         margin: 5px;
