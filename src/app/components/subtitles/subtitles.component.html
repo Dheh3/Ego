@@ -1,4 +1,20 @@
-<ion-card [color]=color *ngIf="dialogue.options.length">
+<!-- <ion-card [color]=color *ngIf="dialogue.options.length">
     <h4>{{ dialogue.text }}</h4>
-    <p *ngFor=" let option of dialogue.options" (click)="chooseOption(option)"> {{ option.text }}</p>
+    <p *ngFor=" let option of dialogue.options" (click)="chooseOption(option)">
+        <ion-icon size="default" name="caret-forward-outline"></ion-icon>
+        {{ option.text }}
+    </p>
+</ion-card> -->
+
+<ion-card [color]=color *ngIf="dialogue.options.length">
+
+    <h4>{{ dialogue.text }}</h4>
+    <ion-item [color]=color *ngFor=" let option of dialogue.options" (click)="chooseOption(option)">
+        <ion-icon size="default" name="caret-forward-outline"></ion-icon>
+        <ion-label>
+            <p>{{option.text}}</p>
+        </ion-label>
+    </ion-item>
 </ion-card>
+
+<!-- <ion-icon name="caret-forward-outline"></ion-icon> -->
