@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'screen',
     loadChildren: () => import('./pages/screen/screen.module').then( m => m.ScreenPageModule)
   },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+  },
 
   
 ];

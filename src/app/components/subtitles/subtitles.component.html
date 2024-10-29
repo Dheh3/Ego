@@ -1,27 +1,7 @@
-<!-- <ion-card [color]=color *ngIf="dialogue.options.length">
-    <h4>{{ dialogue.text }}</h4>
-    <p *ngFor=" let option of dialogue.options" (click)="chooseOption(option)">
-        <ion-icon size="default" name="caret-forward-outline"></ion-icon>
-        {{ option.text }}
-    </p>
-</ion-card> -->
-
-<!-- <ion-card [color]=color *ngIf="dialogue.options.length">
-
-    <h4>{{ dialogue.text }}</h4>
-    <ion-item [color]=color *ngFor=" let option of dialogue.options" (click)="chooseOption(option)">
-        <ion-icon size="default" name="caret-forward-outline"></ion-icon>
-        <ion-label>
-            <p>{{option.text}}</p>
-        </ion-label>
-    </ion-item>
-</ion-card> -->
-
-
-<div *ngIf="!showFullText; else fullText">
+<div *ngIf="!showFullText; else fullText" >
     <ion-card [color]=color *ngIf="dialogue.options.length">
-        <ion-card-subtitle class="ion-text-right">
-            <ion-icon size="default" name="remove" (click)="showFullText = true"></ion-icon>
+        <ion-card-subtitle class="ion-text-right minus">
+            <ion-icon  size="large" name="remove" (click)="showFullText = true"></ion-icon>
         </ion-card-subtitle>
         <h5>{{ dialogue.text }}</h5>
         <ion-item [color]=color *ngFor=" let option of dialogue.options" (click)="chooseOption(option)">
@@ -31,30 +11,12 @@
             </ion-label>
         </ion-item>
     </ion-card>
-
 </div>
+
+
 
 <ng-template #fullText>
     <ion-button (click)="showFullText = false">
-        <ion-icon slot="icon-only" name="open"></ion-icon>
+        <ion-icon class="ion-padding" slot="icon-only" name="open"></ion-icon>
     </ion-button>
 </ng-template>
-<!-- <ion-icon name="caret-forward-outline"></ion-icon> -->
-
-<!-- <div *ngIf="!showFullText; else fullText">
-    <ion-card [color]="color" *ngIf="dialogue.options.length">
-        <h4 (click)="showFullText = true">{{ dialogue.text }}</h4>
-        <ion-item [color]="color" *ngFor="let option of dialogue.options" (click)="chooseOption(option)">
-            <ion-icon size="default" name="caret-forward-outline"></ion-icon>
-            <ion-label>
-                <p>{{ option.text }}</p>
-            </ion-label>
-        </ion-item>
-    </ion-card>
-</div>
-
-<ng-template #fullText>
-    <ion-card (click)="showFullText = false">
-        oi
-    </ion-card>
-</ng-template> -->

@@ -12,6 +12,7 @@ export class SubtitlesComponent  implements OnInit {
   color = 'dark' 
   dialogue: any;
   showFullText = false
+  
 
   constructor(
     private dialoguesService: DialoguesService
@@ -27,6 +28,8 @@ export class SubtitlesComponent  implements OnInit {
   chooseOption(option: scenesOption){
     this.dialoguesService.chooseOption(option)
     //this.dialogue = this.dialoguesService.getDialogue()
+
+    
   }
 
   resetDialogue(){

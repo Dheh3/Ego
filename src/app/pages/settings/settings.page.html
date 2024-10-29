@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-text-center mid-container">
+    <ion-toggle [enableOnOffLabels]="true" class="toggle-mode" (ionChange)="toggleDarkMode($event)"
+    [checked]="isDarkModeEnabled">Dark mode</ion-toggle><br /><br />
+    <ion-toggle [enableOnOffLabels]="true" class="toggle-mode">Safe mode</ion-toggle><br /><br />
+  </div>
+
+</ion-content>

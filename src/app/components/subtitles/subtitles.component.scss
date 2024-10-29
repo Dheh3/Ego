@@ -1,36 +1,49 @@
-/* *{
-    border: red 1px solid;
-} */
-
-ion-card{
-    *{
+ion-card {
+    /* * {
         border: red 1px solid;
-    }
-    
-    h5{
-        margin: 0;
-        padding: 0 20px 5px 20px;
+    } */
+
+    .minus {
+        margin-right: 10px;
+        position: absolute;
+        right: 0;
     }
 
-    p{
+    h5 {
+        margin: 0;
+        padding: 10px 20px 5px 20px;
+    }
+
+    p {
         margin: 5px;
     }
-    ion-icon{
-        font-size: 24px;
-        
+
+    ion-icon {
+        font-size: 16px;
+
+    }
+
+    ion-label {
+        margin: 5px;
     }
 
 }
 
+ion-button {
+    --border-radius: 100%;
 
-ion-card{
+    ion-icon {
+        font-size: 32px;
 
-    ion-label{
-        margin: 5px;
     }
-    ion-icon{
-        font-size: 16px;
-        
-    }
+}
 
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
 }
