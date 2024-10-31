@@ -5,7 +5,7 @@ ion-card {
 .display {
     position: relative;
 }
-
+ 
 .subtitles {
     position: absolute;
     bottom: 10px;
@@ -15,7 +15,6 @@ ion-card {
     z-index: 10;
     transform: translate(0px, 10vh);
 }
-
 
 .bkg-card {
     background-size: cover;

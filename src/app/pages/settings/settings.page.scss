@@ -1,35 +1,24 @@
 ion-header {
     box-shadow: none;
 
-    #click-trigger {
-        --background: var(--ion-color-primary-contrast);
-        --color: var(--ion-color-primary);
-        --box-shadow: none;
-        padding: 0;
-        margin: 0;
+    ion-toolbar {
+        --background: none;
     }
 }
 
-.mid-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+ion-toolbar {
+    --background: none;
+}
 
-    ion-toggle {
-        --track-background: var(--ion-color-dark);
-        --track-background-checked: var(--ion-color-light);
-        --handle-background: var(--ion-color-light);
-        --handle-background-checked: var(--ion-color-dark);
-    }
+ion-list {
+    background: none;
+    margin: 5% 10% 5% 10%;
 
-    .toggle-mode {
-        width: 100%;
-        max-width: 200px;
-        font-size: 1.2rem;
-        background-color: rgba(255, 255, 255, 0);
-        backdrop-filter: blur(8px);
-        border-radius: 5px;
+    ion-item {
+        --background: none;
+        ion-range {
+            --bar-background-active: var(--ion-color-danger);
+            --knob-background: var(--ion-color-medium); //cor da bolinha
+        }
     }
 }

@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    this.applySavedTheme()
+  }
+
+
+  private applySavedTheme() {
+    const darkModePreference = localStorage.getItem('dark-mode');
+    const isDarkModeEnabled = darkModePreference === 'true';
+    document.body.classList.toggle('dark', isDarkModeEnabled);
+  }
 }

@@ -7,15 +7,13 @@
         <ion-item [color]=color *ngFor=" let option of dialogue.options" (click)="chooseOption(option)">
             <ion-icon size="default" name="caret-forward-outline"></ion-icon>
             <ion-label>
-                <p>{{option.text}}</p>
+                {{option.text}}
             </ion-label>
         </ion-item>
     </ion-card>
 </div>
 
-
-
-<ng-template #fullText>
+<ng-template #fullText id="fullText">
     <ion-button (click)="showFullText = false">
         <ion-icon class="ion-padding" slot="icon-only" name="open"></ion-icon>
     </ion-button>

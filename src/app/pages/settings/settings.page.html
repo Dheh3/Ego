@@ -1,18 +1,89 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-title>Settings</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
 
-  <div class="ion-text-center mid-container">
-    <ion-toggle [enableOnOffLabels]="true" class="toggle-mode" (ionChange)="toggleDarkMode($event)"
-    [checked]="isDarkModeEnabled">Dark mode</ion-toggle><br /><br />
-    <ion-toggle [enableOnOffLabels]="true" class="toggle-mode">Safe mode</ion-toggle><br /><br />
-  </div>
+  <!--  <div class="ion-text-center mid-container">
+
+    <ion-toggle (ionChange)="toggleDarkMode($event)" [checked]="isDarkModeEnabled" [enableOnOffLabels]="true"
+      class="toggle-mode">
+      Dark
+      mode</ion-toggle><br /><br />
+    <ion-toggle [enableOnOffLabels]="true" class="toggle-mode">Safe mode</ion-toggle><br />
+    <p><b>- - -</b></p><br>
+
+  </div> -->
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+  <ion-list>
+    <h2 class="ion-text-center"><b>Geral</b></h2>
+    <ion-item>
+      <ion-toggle (ionChange)="toggleDarkMode($event)" [checked]="isDarkModeEnabled" [enableOnOffLabels]="true"
+        class="toggle-mode">
+        Dark
+        mode</ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-toggle [enableOnOffLabels]="true" class="toggle-mode">Safe mode</ion-toggle><br />
+    </ion-item>
+    <br><br>
+    <h2 class="ion-text-center"><b>Gráfico</b></h2>
+    <ion-item>
+      <ion-icon size="default" name="caret-forward-outline"></ion-icon>
+      <ion-select class="always-flip" toggleIcon="caret-down-sharp" interface="popover" label="Antialiasing"
+        placeholder="msaa">
+        <ion-select-option value="apples">msaa</ion-select-option>
+        <ion-select-option value="oranges">csaa</ion-select-option>
+        <ion-select-option value="bananas">fxaa</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-icon size="default" name="caret-forward-outline"></ion-icon>
+      <ion-select class="always-flip" toggleIcon="caret-down-sharp" interface="popover" label="gráficos"
+        placeholder="Alto">
+        <ion-select-option value="apples">Ultra</ion-select-option>
+        <ion-select-option value="oranges">Alto</ion-select-option>
+        <ion-select-option value="bananas">Medio</ion-select-option>
+        <ion-select-option value="bananas">Baixo</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-icon size="default" name="caret-forward-outline"></ion-icon>
+      <ion-select class="always-flip" toggleIcon="caret-down-sharp" interface="popover" label="Restrição de FPS"
+        placeholder="60 FPS">
+        <ion-select-option value="apples">Sem restrição</ion-select-option>
+        <ion-select-option value="oranges">60 FPS</ion-select-option>
+        <ion-select-option value="bananas">30 FPS</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-icon size="default" name="caret-forward-outline"></ion-icon>
+      <ion-toggle [enableOnOffLabels]="true" class="toggle-mode">V-SYNC</ion-toggle><br />
+    </ion-item>
+    <br><br>
+    <h2 class="ion-text-center"><b>Volume</b></h2>
+    <ion-item>
+      <ion-range labelPlacement="stacked" label="Musica de fundo" [ticks]="true" [snaps]="true" [min]="0" [value]="5" [max]="10"
+        label-placement="start">
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-range labelPlacement="stacked" label="Efeitos" [ticks]="true" [snaps]="true" [min]="0" [value]="5" [max]="10"
+        label-placement="start">
+      </ion-range>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>

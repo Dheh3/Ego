@@ -4,6 +4,8 @@ export interface scenesOption {
     background?:string;
 }
 
+const path = '../../assets/'
+
 //https://placehold.co/400
 export const scenes = {
     start: {
@@ -40,7 +42,7 @@ export const scenes = {
     },
     end: {
         text: 'END',
-        background:'https://placehold.co/400',
+        background: path+'teste.jpg',
         options: []
     },
 }
