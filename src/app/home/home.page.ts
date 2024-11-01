@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -10,7 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(private router: Router,private navCtrl: NavController) { }
+  constructor(private navCtrl: NavController) { }
 
 
   redirect(path: string) {
@@ -26,15 +24,13 @@ export class HomePage {
       this.navCtrl.navigateRoot([path])
       //window.location.href = '/screen'
 
-
-
       overlay.style.opacity = "0";
 
       setTimeout(() => {
         overlay.style.display = "none";
         overlay.style.opacity = "0";
-      }, 1000);
-    }, 1000);
+      },2000);
+    }, 2000);
 
   }
 

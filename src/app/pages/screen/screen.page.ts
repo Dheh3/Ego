@@ -29,6 +29,7 @@ export class ScreenPage implements OnInit {
   displayEgo() {
     this.characterName = this.gameService.getCharacterName()
   }
+  
 
   /* chooseOption(option: scenesOption){
     this.dialoguesService.chooseOption(option)

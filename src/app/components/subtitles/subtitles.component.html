@@ -1,7 +1,11 @@
-<div *ngIf="!showFullText; else fullText" >
+
+<div class="darker"></div>
+
+
+<div *ngIf="!showFullText; else fullText">
     <ion-card [color]=color *ngIf="dialogue.options.length">
         <ion-card-subtitle class="ion-text-right minus">
-            <ion-icon  size="large" name="remove" (click)="showFullText = true"></ion-icon>
+            <ion-icon size="large" name="resize" (click)="showFullText = true"></ion-icon>
         </ion-card-subtitle>
         <h5>{{ dialogue.text }}</h5>
         <ion-item [color]=color *ngFor=" let option of dialogue.options" (click)="chooseOption(option)">
@@ -13,8 +17,25 @@
     </ion-card>
 </div>
 
-<ng-template #fullText id="fullText">
-    <ion-button (click)="showFullText = false">
-        <ion-icon class="ion-padding" slot="icon-only" name="open"></ion-icon>
-    </ion-button>
+<ng-template #fullText>
+
+    <div class="fullText">
+        <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+            <ion-fab-button>
+                <ion-icon name="caret-forward"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-list side="end">
+                <ion-fab-button (click)="showFullText = false">
+                    <ion-icon color="danger" name="chatbubble-ellipses"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button (click)="redirect()">
+                    <ion-icon color="danger" name="home"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button>
+                    <ion-icon color="danger" name="save"></ion-icon>
+                </ion-fab-button>
+            </ion-fab-list>
+        </ion-fab>
+    </div>
+
 </ng-template>
